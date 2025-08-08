@@ -1,1 +1,26 @@
+/* Font imports - Add your custom font imports here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  --color-regal-blue: #243c5a; 
+}
+
+/* Global font settings - Inter Font */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  color: #1358A8;
+}
+
+/* Make all headings use Inter font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+}
+
+a {
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}

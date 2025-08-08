@@ -13,28 +13,31 @@ html
     link rel="icon" href="/icon.png" type="image/png"
     link rel="icon" href="/icon.svg" type="image/svg+xml"
     link rel="apple-touch-icon" href="/icon.png"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
-    = stylesheet_link_tag :app, "data-turbo-track": "reload"
+    = stylesheet_link_tag "tailwind", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  body
-    header.flex.items-center.justify-between.px-6.py-4.border-b.border-gray-300.bg-white.shadow-sm
+  body.font-sans
+    header.flex.items-center.justify-between.px-3.border-b.border-gray-300.bg-white.shadow-sm
       / Left side icon (logo)
       = link_to root_path, class: "flex items-center" do
-        = image_tag("icon.png", alt: "Logo", class: "h-10 w-10")
+        = image_tag("logo.png", alt: "Logo", class: "h-[93px] w-[93px]")
 
       / Center navigation with 3 buttons
-      nav.flex.gap-8.flex-1.justify-center
-        = link_to "Home", 'root_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
-        = link_to "Services", 'services_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
-        = link_to "Contact", 'contact_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
+      nav.flex.gap-8.flex-1.justify-center.text-[#1358A8]
+        = link_to "Головна", 'root_path', class: "text-xl hover:underline"
+        = link_to "Послуги", 'services_path', class: "text-xl hover:underline"
+        = link_to "Контакти", 'contact_path', class: "text-xl hover:underline"
 
       / Right side phone button with text below
-      .flex.flex-col.items-center
-        = link_to "tel:+1234567890", class: "flex flex-col items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-          i.fas.fa-phone.fa-lg.mb-1
-          / FontAwesome icon with margin bottom
-          span.text-sm Call Us
+      .flex.flex-col.items-center.pr-5.text-[#1358A8]
+        = link_to "tel:+1234567890", class: "flex flex-row items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
+          i.fas.fa-phone.fa-md.pr-2
+          span.text-sm 050 134 96 29
+
+        span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
+
 
     main.container.mx-auto.mt-28.px-5.flex.flex-col
       = yield
