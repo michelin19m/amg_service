@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title = content_for(:title) || "Amg Service"
+    meta name="viewport" content="width=device-width,initial-scale=1"
+    meta name="apple-mobile-web-app-capable" content="yes"
+    meta name="mobile-web-app-capable" content="yes"
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = yield :head
+
+    link rel="icon" href="/icon.png" type="image/png"
+    link rel="icon" href="/icon.svg" type="image/svg+xml"
+    link rel="apple-touch-icon" href="/icon.png"
+
+    = stylesheet_link_tag :app, "data-turbo-track": "reload"
+    = javascript_importmap_tags
+
+  body
+    header.flex.items-center.justify-between.px-6.py-4.border-b.border-gray-300.bg-white.shadow-sm
+      / Left side icon (logo)
+      = link_to root_path, class: "flex items-center" do
+        = image_tag("icon.png", alt: "Logo", class: "h-10 w-10")
+
+      / Center navigation with 3 buttons
+      nav.flex.gap-8.flex-1.justify-center
+        = link_to "Home", 'root_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
+        = link_to "Services", 'services_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
+        = link_to "Contact", 'contact_path', class: "text-gray-700 hover:text-blue-600 font-semibold"
+
+      / Right side phone button with text below
+      .flex.flex-col.items-center
+        = link_to "tel:+1234567890", class: "flex flex-col items-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+          i.fas.fa-phone.fa-lg.mb-1
+          / FontAwesome icon with margin bottom
+          span.text-sm Call Us
+
+    main.container.mx-auto.mt-28.px-5.flex.flex-col
+      = yield
