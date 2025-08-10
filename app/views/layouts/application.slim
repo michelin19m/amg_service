@@ -19,7 +19,7 @@ html
         = javascript_importmap_tags
 
     body.font-sans
-        header data-controller="header" class="bg-white border-b border-gray-300 shadow-sm"
+        header data-controller="header" class="sticky top-0 z-50 bg-white border-b border-gray-300 shadow-sm transition-opacity duration-2000"
             .container.mx-auto.px-4
                 .flex.items-center.justify-between.py-3.md:py-4
                     / Left: logo
@@ -27,7 +27,7 @@ html
                         = image_tag "logo.png", alt: "Logo", class: "h-[72px] w-[72px] md:h-[93px] md:w-[93px] object-contain"
 
                     / Center nav (hidden on mobile, centered on md+)
-                    nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8] aria-hidden='false'"
+                    nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8]"
                         = link_to "Головна", 'root_path', class: "text-lg md:text-xl hover:underline"
                         = link_to "Послуги", 'services_path', class: "text-lg md:text-xl hover:underline"
                         = link_to "Контакти", 'contact_path', class: "text-lg md:text-xl hover:underline"
@@ -39,28 +39,25 @@ html
                             span.text-sm 050 134 96 29
                         span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
 
-                    / Mobile: burger button (visible on mobile only)
+                    / Mobile: burger button
                     button type="button" data-action="click->header#toggle" data-header-target="btn" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1358A8]"
                         span.sr-only Toggle navigation
-                        / hamburger (visible when menu closed)
                         svg data-header-target="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                             path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"
-                        / close (visible when menu open)
                         svg data-header-target="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                             path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"
 
-            / Mobile menu (hidden by default; toggled by Stimulus)
+            / Mobile menu
             div id="mobile-menu" data-header-target="menu" class="md:hidden hidden bg-white shadow-md"
                 .container.mx-auto.px-4.py-4
-                    nav class="flex flex-col gap-3"
+                    nav.flex.flex-col.gap-3
                         = link_to "Головна", 'root_path', class: "text-lg text-[#1358A8] font-medium"
                         = link_to "Послуги", 'services_path', class: "text-lg text-[#1358A8] font-medium"
                         = link_to "Контакти", 'contact_path', class: "text-lg text-[#1358A8] font-medium"
 
-                    hr class="my-3 border-t border-gray-200"
+                    hr.my-3.border-t.border-gray-200
 
-                    / Phone block inside mobile menu
-                    div class=" flex flex-col items-start text-[#1358A8]"
+                    div.flex.flex-col.items-start.text-[#1358A8]
                         = link_to "tel:+1234567890", class: "flex items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
                             i.fas.fa-phone.fa-md.pr-2
                             span.text-sm 050 134 96 29
@@ -68,3 +65,27 @@ html
 
         main
             = yield
+        footer.bg-white.border-t.border-zinc-300.py-6
+            .container.mx-auto.px-4
+                / Top row
+                .flex.flex-col.md:flex-row.md:items-center.md:justify-between
+                    / Left — copyright
+                    p.text-gray-400.text-sm.font-medium ©2025 АМГ Сервіс
+
+                    / Right — navigation
+                    nav.flex.space-x-6.mt-4.md:mt-0
+                        = link_to "Головна", 'root_path', class: "text-gray-800 text-sm hover:underline"
+                        = link_to "Послуги", 'services_path', class: "text-gray-800 text-sm hover:underline"
+                        = link_to "Контакти", 'contact_path', class: "text-gray-800 text-sm hover:underline"
+
+                / Divider
+                .border-t.border-neutral-300.mt-4.pt-4.flex.justify-end.items-center.space-x-4
+                    = link_to "tel:+380XXXXXXXXX", class: "text-gray-400 hover:text-gray-600"
+                        i.fas.fa-phone-alt.text-lg
+
+                    = link_to "https://facebook.com/yourpage", target: "_blank", class: "text-gray-400 hover:text-blue-600"
+                        i.fab.fa-facebook-f.text-lg
+
+                    = link_to "https://instagram.com/yourpage", target: "_blank", class: "text-gray-400 hover:text-pink-500"
+                        i.fab.fa-instagram.text-lg
+
