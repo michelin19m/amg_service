@@ -1,135 +1,127 @@
 / hero wrapper
-div class="relative w-full h-[70vh]"
+div class="relative w-full h-[50vh] sm:h-[70vh]"
     = image_tag "background_img.jpg", class: "absolute inset-0 w-full h-full object-cover"
-
-    / overlay
     div class="absolute inset-0 z-10" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 60%);"
+    div class="absolute z-20 left-4 sm:left-[60px] bottom-4 sm:bottom-[80px] flex flex-col items-start w-full sm:w-xl font-light"
+        h1 class="text-white text-[32px] sm:text-[50px] font-bold" Автосервіс АМГ
+        p class="text-white text-[18px] sm:text-[30px] mt-2" Професійний автосервіс у Харкові. 
+        p class="text-white text-[18px] sm:text-[30px]" 20 років якості та довіри .
+        p class="text-white text-[18px] sm:text-[30px]" Ремонтуємо, як для себе.
+        = link_to "Записатись", "#", class: "mt-6 sm:mt-10 px-6 sm:px-11 py-2 sm:py-3 bg-[#1358A8] text-[18px] sm:text-[30px] text-white rounded-lg shadow hover:bg-[#0f447f] transition"
 
-    / content pinned to bottom-left
-    div class="absolute z-20 left-[60px] bottom-[80px] flex flex-col items-start w-xl font-light"
-        h1 class="text-white text-[50px] font-bold" Автосервіс АМГ
-        p class="text-white text-[30px] mt-2" Професійний автосервіс у Харкові. 
-        p class="text-white text-[30px]" 20 років якості та довіри .
-        p class="text-white text-[30px]" Ремонтуємо, як для себе.
-        = link_to "Записатись", "#", class: "mt-10 px-11 py-3 bg-[#1358A8] text-[30px] text-white rounded-lg shadow hover:bg-[#0f447f] transition"
+div class="why-us p-4 sm:p-10"
+    div class="heading pb-6 sm:pb-10 px-4 sm:px-10"
+        div class="flex items-center"
+            hr class="flex-grow border-t border-[#1358A8]"
+            p class="mx-4 sm:mx-10 text-[28px] sm:text-[50px] text-[#1358A8]" Чому обирають нас
+            hr class="flex-grow border-t border-[#1358A8]"
+    div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-40 gap-y-4 sm:gap-y-10 mx-auto max-w-full sm:max-w-3/4"
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-phone fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Більше 20 років досвіду
 
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-envelope fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Оперативний ремонт без втрати якості
 
-div.why-us.p-10
-    .heading.pb-10.px-10
-        div.flex.items-center
-            hr.flex-grow.border-t.border-[#1358A8]
-            p class="mx-10 text-[50px] text-[#1358A8]" Чому обирають нас
-            hr.flex-grow.border-t.border-[#1358A8]
-    
-    div class="grid grid-cols-3 gap-x-40 gap-y-10 mx-auto max-w-3/4"
-        div.flex.items-center.w-[90px]
-            i.fas.fa-phone.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Більше 20 років досвіду
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-map-marker fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Професійна команда майстрів з багаторічним досвідом
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-envelope.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Оперативний ремонт без втрати якості
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-tools fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Комплексне обслуговування авто
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-map-marker.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Професійна команда майстрів з багаторічним досвідом
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-wallet fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Доступні ціни
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-tools.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Комплексне обслуговування авто
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-calendar-check fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Швидкий запис
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-wallet.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Доступні ціни
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-car fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Працюємо з усіма марками авто
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-calendar-check.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Швидкий запис
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-check-circle fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Контроль робіт на кожному етапі
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-car.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Працюємо з усіма марками авто
+        div class="flex items-center w-[60px] sm:w-[90px]"
+            i class="fas fa-shield-alt fa-2x sm:fa-3x mr-3 sm:mr-5"
+            span class="text-base sm:text-lg text-[#1F2A37] font-light" Гарантія на всі роботи
 
-        div.flex.items-center.w-[90px]
-            i.fas.fa-check-circle.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Контроль робіт на кожному етапі
-
-        div.flex.items-center.w-[90px]
-            i.fas.fa-shield-alt.fa-3x.mr-5
-            span class="text-lg text-[#1F2A37] font-light" Гарантія на всі роботи
-
-div class="mx-5 rounded-[20px] bg-[#1358A8] max-w-14/15 mx-auto"
-    div.heading
-        .heading.p-10
-            div.flex.items-center
-                hr.flex-grow.border-t.border-white
-                p class="mx-10 text-[50px] text-white" Наші сервіси
-                hr.flex-grow.border-t.border-white
-    div.cards-grid.p-10
-        div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+div class="mx-2 sm:mx-5 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] max-w-full sm:max-w-14/15 mx-auto"
+    div class="heading"
+        div class="heading p-4 sm:p-10"
+            div class="flex items-center"
+                hr class="flex-grow border-t border-white"
+                p class="mx-4 sm:mx-10 text-[28px] sm:text-[50px] text-white" Наші сервіси
+                hr class="flex-grow border-t border-white"
+    div class="cards-grid p-4 sm:p-10"
+        div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8"
             / Card 1
-            div class="bg-white shadow-lg rounded-[20px] overflow-hidden flex flex-col"
-                div.relative
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                div.p-6.flex.flex-col.flex-grow
-                    h2 class="font-bold mb-2 text-[25px] text-[#1F2A37]" Назва картки 6
-                    p class="flex-grow text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[20px] hover:bg-[#0f447f]" href="#" Детальніше
-                        .flex.flex-col.items-center.pr-5.text-[#1358A8]
-                            = link_to "tel:+1234567890", class: "flex flex-row items-center text-[20px] px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
-                                i.fas.fa-phone.fa-md.pr-2
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Детальніше
+                        div class="flex flex-col items-center pr-0 sm:pr-5 text-[#1358A8]"
+                            = link_to "tel:+1234567890", class: "flex flex-row items-center text-[15px] sm:text-[20px] px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
+                                i class="fas fa-phone fa-md pr-2"
                                 span Подзвонити
 
             / Card 2
-            div.bg-white.shadow-lg.rounded-lg.overflow-hidden.flex.flex-col
-                = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
-                div.p-6.flex.flex-col.flex-grow
-                    h2 class="font-bold mb-2 text-[25px] text-[#1F2A37]" Назва картки 6
-                    p.flex-grow.text-[20px] Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow hover:bg-[#0f447f] bg-[#1358A8]" href="#" Кнопка 1
-                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-300" href="#" Кнопка 2
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-lg overflow-hidden flex flex-col"
+                = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Кнопка 1
+                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-gray-300 transition" href="#" Кнопка 2
 
             / Card 3
-            div.bg-white.shadow-lg.rounded-lg.overflow-hidden.flex.flex-col
-                = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
-                div.p-6.flex.flex-col.flex-grow
-                    h2.font-bold.mb-2.text-[25px] Назва картки 6
-                    p.flex-grow.text-[20px] Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow hover:bg-[#0f447f] bg-[#1358A8]" href="#" Кнопка 1
-                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-300" href="#" Кнопка 2
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-lg overflow-hidden flex flex-col"
+                = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Кнопка 1
+                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-gray-300 transition" href="#" Кнопка 2
 
             / Card 4
-            div.bg-white.shadow-lg.rounded-lg.overflow-hidden.flex.flex-col
-                = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
-                div.p-6.flex.flex-col.flex-grow
-                    h2.font-bold.mb-2.text-[25px] Назва картки 6
-                    p.flex-grow.text-[20px] Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow hover:bg-[#0f447f] bg-[#1358A8]" href="#" Кнопка 1
-                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-300" href="#" Кнопка 2
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-lg overflow-hidden flex flex-col"
+                = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Кнопка 1
+                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-gray-300 transition" href="#" Кнопка 2
 
             / Card 5
-            div.bg-white.shadow-lg.rounded-lg.overflow-hidden.flex.flex-col
-                = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
-                div.p-6.flex.flex-col.flex-grow
-                    h2.font-bold.mb-2.text-[25px] Назва картки 6
-                    p.flex-grow.text-[20px] Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow hover:bg-[#0f447f] bg-[#1358A8]" href="#" Кнопка 1
-                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-300" href="#" Кнопка 2
-
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-lg overflow-hidden flex flex-col"
+                = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Кнопка 1
+                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-gray-300 transition" href="#" Кнопка 2
 
             / Card 6
-            div.bg-white.shadow-lg.rounded-lg.overflow-hidden.flex.flex-col
-                = image_tag "image1.jpg", class: "w-full object-cover h-[193px]"
-                div.p-6.flex.flex-col.flex-grow
-                    h2.font-bold.mb-2.text-[25px] Назва картки 6
-                    p.flex-grow.text-[20px] Тут можна розмістити ще один опис картки.
-                    div.mt-4.flex.space-x-4
-                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow hover:bg-[#0f447f] bg-[#1358A8]" href="#" Кнопка 1
-                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-300" href="#" Кнопка 2
-
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-lg overflow-hidden flex flex-col"
+                = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тут можна розмістити ще один опис картки.
+                    div class="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+                        a class="bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-[#0f447f] transition" href="#" Кнопка 1
+                        a class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg shadow text-[15px] sm:text-[20px] hover:bg-gray-300 transition" href="#" Кнопка 2

@@ -1,0 +1,196 @@
+/ -------------------- HERO --------------------
+div class="relative w-full h-[50vh] sm:h-[70vh] overflow-hidden"
+    = image_tag "background_img1.jpg", class: "absolute inset-0 w-full h-full object-cover", alt: "Hero background"
+
+    / gradient overlay (transparent -> black 60%)
+    div class="absolute inset-0 z-10" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 60%);"
+
+    / content pinned bottom-left (responsive offsets)
+    div class="absolute z-20 left-4 sm:left-[60px] bottom-4 sm:bottom-[80px] max-w-[720px] text-left"
+        h1 class="text-white text-[28px] sm:text-[50px] font-bold leading-tight mb-2" Автосервіс АМГ
+        p class="text-white text-[16px] sm:text-[20px] mb-1" Професійний автосервіс у Харкові.
+        p class="text-white text-[16px] sm:text-[20px] mb-4" 20 років якості та довіри — ремонтуємо як для себе.
+        = link_to "Записатись", "#", class: "inline-block bg-[#1358A8] text-white px-6 py-2 sm:px-10 sm:py-3 rounded-lg text-[16px] sm:text-[20px] shadow hover:bg-[#0f447f] transition"
+
+
+/ -------------------- WHY-US (icons + text grid) --------------------
+div class="why-us py-6 sm:py-10 bg-white"
+    div class="container mx-auto px-4 sm:px-6 lg:px-8"
+        / heading with lines
+        div class="flex items-center"
+            hr class="flex-grow border-t border-[#1358A8]"
+            p class="mx-4 text-[28px] sm:text-[50px] text-[#1358A8] font-semibold" Чому обирають нас
+            hr class="flex-grow border-t border-[#1358A8]"
+
+        / grid of 3x3 (explicit 9 items)
+        div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6"
+            div class="flex items-center"
+                i class="fas fa-phone fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Більше 20 років досвіду
+
+            div class="flex items-center"
+                i class="fas fa-envelope fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Оперативний ремонт без втрати якості
+
+            div class="flex items-center"
+                i class="fas fa-map-marker fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Професійна команда майстрів з багаторічним досвідом
+
+            div class="flex items-center"
+                i class="fas fa-wrench fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Комплексне обслуговування авто
+
+            div class="flex items-center"
+                i class="fas fa-tags fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Доступні ціни
+
+            div class="flex items-center"
+                i class="fas fa-calendar-check fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Швидкий запис
+
+            div class="flex items-center"
+                i class="fas fa-car fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Працюємо з усіма марками авто
+
+            div class="flex items-center"
+                i class="fas fa-check-circle fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Контроль робіт на кожному етапі
+
+            div class="flex items-center"
+                i class="fas fa-shield-alt fa-2x sm:fa-3x mr-4 text-[#1358A8]"
+                span class="text-base sm:text-lg text-[#1F2A37] font-light" Гарантія на всі роботи
+
+
+/ -------------------- SERVICES (blue block + 6 cards) --------------------
+div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8]"
+    div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10"
+        / section heading
+        div class="flex items-center mb-6"
+            hr class="flex-grow border-t border-white"
+            p class="mx-4 text-[28px] sm:text-[40px] text-white font-semibold" Наші сервіси
+            hr class="flex-grow border-t border-white"
+
+        / cards grid: equal-width cards, buttons align
+        div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6"
+            / Card 1
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 1"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 1
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги — пару рядків для привабливого прев’ю.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 2
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 2"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 2
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 3
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 3"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 3
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 4
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 4"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 4
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 5
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 5"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 5
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 6
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 6"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Назва картки 6
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги.
+                    div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] transition" href="#" Детальніше
+
+section.py-12
+    .container.mx-auto.px-4.max-w-6xl
+        .relative
+            / Heading
+            h2.text-sky-700.text-3xl.md:text-5xl.font-normal Що кажуть наші клієнти
+
+            / Layout: on md+ the testimonial card sits toward the right (col 2-3), on mobile it stacks
+            .mt-6.md:mt-10
+                / empty column spacer on md so card aligns to the right-ish area like your design
+                .hidden.md:block
+
+                / Testimonial card container (spans 2 cols on md+)
+                .md:col-span-2.relative
+                    / Card (white rounded box with border + shadow)
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.z-10
+                        blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
+                            | Дуже задоволений сервісом! Швидко знайшли причину несправності, все пояснили і якісно відремонтували авто. Рекомендую!
+                            - link_to "show more", "#", class: "underline ml-1 text-current"
+
+                        / Author row
+                        .mt-6.flex.items-center.gap-4
+                            = image_tag "avatar1.png", alt: "Misha Makhnovskyy avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
+                            .author
+                                p.text-yellow-500.text-base.md:text-xl.font-medium Misha Makhnovskyy
+                                p.text-yellow-500/60.text-sm.md:text-lg Лютий 2023
+
+                    / Decorative oversized quotes (positioned visually over the right side)
+                    / using z-index lower than card so it sits behind but visible
+                    span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
+
+
+                    / Pagination dots (explicit, placed below the card)
+                    .mt-6.flex.gap-2.items-center
+                        span.w-2.h-2.bg-zinc-300.rounded-full
+                        span.w-2.h-2.bg-zinc-300/60.rounded-full
+                        span.w-2.h-2.bg-zinc-300/60.rounded-full
+                        span.w-2.h-2.bg-zinc-300/60.rounded-full
+                        span.w-2.h-2.bg-zinc-300/60.rounded-full
+
+
+/ -------------------- CONTACT / FOOTER snippets (kept & simplified) --------------------
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center"
+    div class="text-sky-700 text-3xl mb-4 text-center" Звʼяжіться з нами
+    p class="text-lg text-sky-700/80 mb-6 text-center max-w-lg" Залиште заявку для консультації та запису на сервісне обслуговування
+    / simple form placeholders (replace with form_with later)
+    div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg w-full"
+        input type="text" placeholder="Ім'я" class="w-full h-12 rounded-[10px] border outline-2 outline-zinc-300 p-3"
+        input type="text" placeholder="Телефон" class="w-full h-12 rounded-[10px] border outline-2 outline-zinc-300 p-3"
+        textarea placeholder="Ваше питання..." class="w-full h-40 rounded-[10px] border outline-2 outline-zinc-300 p-3 col-span-1 sm:col-span-2"
+    a class="inline-block bg-[#1358A8] text-white px-6 py-3 my-5 rounded-[10px] shadow mx-auto" href="#" Надіслати
