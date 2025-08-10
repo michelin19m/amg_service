@@ -61,89 +61,144 @@ div class="why-us py-6 sm:py-10 bg-white"
                 span class="text-base sm:text-lg text-[#1F2A37] font-light" Гарантія на всі роботи
 
 
-/ -------------------- SERVICES (blue block + 6 cards) --------------------
-div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8]"
+/ Services block — initial 6 visible cards + 6 hidden (expandable)
+div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data-controller="services"
     div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10"
-        / section heading
+        / heading (anchor target)
         div class="flex items-center mb-6" id="services"
             hr class="flex-grow border-t border-white"
             p class="mx-4 text-[28px] sm:text-[40px] text-white font-semibold" Наші сервіси
             hr class="flex-grow border-t border-white"
 
-        / cards grid: equal-width cards, buttons align
+        / visible cards (first 6)
         div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6"
             / Card 1
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 1"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 1"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Установлення автомобільних охоронних систем
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Проводимо професійний монтаж сучасних сигналізацій, іммобілайзерів і GPS-трекерів для комплексного захисту авто від викрадення та злому.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition text-center" href="#" Детальніше
 
             / Card 2
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 2"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 2"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Продаж та встановлення фаркопів
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Робимо якісний підбір і надійний монтаж фаркопів для перевезення причепів, велосипедних багажників та іншого обладнання, з гарантією безпеки.
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Робимо якісний підбір і надійний монтаж фаркопів.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 3
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 5"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 3"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
-                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Тонування автомобілів американськими плівками Global та Ultra Vision
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" обклеюємо авто атермальною плівкою, що не пропускає тепло влітку та зберігає його взимку, енергозберігаючею, противоударною або антигравійною.
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Тонування автомобілів
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тонування якісними плівками Global та Ultra Vision.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
-            
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+
             / Card 4
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 3"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 4"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Шиномонтаж
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Здійснюємо якісне встановлення, балансування та ремонт автомобільних шин для безпечної і комфортної їзди.
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Встановлення, балансування та ремонт шин.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 5
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 4"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 5"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Рихтовка авто
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Надаємо професійне відновлення кузова автомобіля до заводських параметрів.
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Відновлення кузова до заводських параметрів.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 6
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 6"
+                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 6"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
-                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Ремонт/заміна приймальної вихлопної труби
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Проводимо ремонт або повну заміну приймальної труби вихлопу. Так само ремонт колектора або заміна.
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Ремонт вихлопної труби
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Ремонт або заміна вихлопних систем.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
+                        a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
+        / ===== Hidden extra cards container (collapsed by default) =====
+        div id="services-extra" class="mt-6" data-services-target="extra" aria-hidden="true" style="max-height: 0px; overflow: hidden; transition: max-height 500ms ease;"
+            div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+                / Extra Card 7
+                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                    div class="relative"
+                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 7"
+                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                    div class="p-4 sm:p-6 flex flex-col flex-grow"
+                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Додаткова послуга 7
+                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги...
+                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                            a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+                / Extra Card 7
+                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                    div class="relative"
+                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 7"
+                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                    div class="p-4 sm:p-6 flex flex-col flex-grow"
+                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Додаткова послуга 7
+                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги...
+                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                            a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+                / Extra Card 7
+                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                    div class="relative"
+                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 7"
+                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                    div class="p-4 sm:p-6 flex flex-col flex-grow"
+                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Додаткова послуга 7
+                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги...
+                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                            a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+                / Extra Card 7
+                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                    div class="relative"
+                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[120px] sm:h-[193px]", alt: "Service 7"
+                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                    div class="p-4 sm:p-6 flex flex-col flex-grow"
+                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Додаткова послуга 7
+                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Короткий опис послуги...
+                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                            a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+                
+    / ===== Show more button (centered) =====
+    div class="flex justify-center mb-6"
+        button type="button" data-action="click->services#toggle" data-services-target="button" aria-controls="services-extra" aria-expanded="false" data-services-show-text="Показати ще" data-services-hide-text="Приховати" class="inline-flex items-center gap-3 bg-white text-[#1358A8] px-6 py-2 rounded-lg shadow font-medium hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1358A8]"
+            span class="label" Показати ще
+            i class="fas fa-chevron-down transition-transform duration-300"
+
+/ -------------------- REVIEWS (Swiper slider) --------------------
 section.py-12 data-controller="reviews"
     .container.mx-auto.px-4.max-w-6xl
         h2.text-sky-700.text-3xl.md:text-5xl.font-normal Що кажуть наші клієнти
