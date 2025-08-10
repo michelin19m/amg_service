@@ -144,44 +144,42 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8]"
                         a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
                         a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] hover:bg-[#0f447f] text-center transition" href="#" Детальніше
 
-section.py-12
+section.py-12 data-controller="reviews"
     .container.mx-auto.px-4.max-w-6xl
-        .relative
-            / Heading
-            h2.text-sky-700.text-3xl.md:text-5xl.font-normal Що кажуть наші клієнти
-
-            / Layout: on md+ the testimonial card sits toward the right (col 2-3), on mobile it stacks
-            .mt-6.md:mt-10
-                / empty column spacer on md so card aligns to the right-ish area like your design
-                .hidden.md:block
-
-                / Testimonial card container (spans 2 cols on md+)
-                .md:col-span-2.relative
-                    / Card (white rounded box with border + shadow)
-                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.z-10
+        h2.text-sky-700.text-3xl.md:text-5xl.font-normal Що кажуть наші клієнти
+        .swiper.mt-6.md:mt-10.relative
+            .swiper-wrapper
+                / === Slide 1 ===
+                .swiper-slide
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
                         blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
                             | Дуже задоволений сервісом! Швидко знайшли причину несправності, все пояснили і якісно відремонтували авто. Рекомендую!
-                            - link_to "show more", "#", class: "underline ml-1 text-current"
-
-                        / Author row
+                            = link_to "show more", "#", class: "underline ml-1 text-current"
                         .mt-6.flex.items-center.gap-4
                             = image_tag "avatar1.png", alt: "Misha Makhnovskyy avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
                             .author
                                 p.text-yellow-500.text-base.md:text-xl.font-medium Misha Makhnovskyy
                                 p.text-yellow-500/60.text-sm.md:text-lg Лютий 2023
+                        span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
-                    / Decorative oversized quotes (positioned visually over the right side)
-                    / using z-index lower than card so it sits behind but visible
-                    span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
+                / === Slide 2 ===
+                .swiper-slide
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
+                        blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
+                            | Дуже приємний персонал і професійний підхід! Машину повернули швидше, ніж очікував.
+                        .mt-6.flex.items-center.gap-4
+                            = image_tag "avatar1.png", alt: "Anna Ivanova avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
+                            .author
+                                p.text-yellow-500.text-base.md:text-xl.font-medium Anna Ivanova
+                                p.text-yellow-500/60.text-sm.md:text-lg Січень 2023
+                        span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
-
-                    / Pagination dots (explicit, placed below the card)
-                    .mt-6.flex.gap-2.items-center
-                        span.w-2.h-2.bg-zinc-300.rounded-full
-                        span.w-2.h-2.bg-zinc-300/60.rounded-full
-                        span.w-2.h-2.bg-zinc-300/60.rounded-full
-                        span.w-2.h-2.bg-zinc-300/60.rounded-full
-                        span.w-2.h-2.bg-zinc-300/60.rounded-full
+            / Swiper navigation and pagination below the cards
+            .flex.flex-col.items-center.mt-6
+                .swiper-pagination.flex.justify-center
+                / .flex
+                /     .swiper-button-prev
+                /     .swiper-button-next
 
 
 / -------------------- CONTACT / FOOTER snippets (kept & simplified) --------------------

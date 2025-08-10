@@ -14,17 +14,18 @@ html
         link rel="icon" href="/icon.svg" type="image/svg+xml"
         link rel="apple-touch-icon" href="/icon.png"
         link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 
         = stylesheet_link_tag "tailwind", "data-turbo-track": "reload"
         = javascript_importmap_tags
 
     body.font-sans
-        header data-controller="header" class="sticky top-0 z-50 bg-white border-b border-gray-300 shadow-sm transition-opacity duration-2000"
+        header data-controller="header" class="sticky top-0 z-50 bg-white border-b border-gray-300 shadow-sm"
             .container.mx-auto.px-4
-                .flex.items-center.justify-between.py-3.md:py-4
+                div class="flex items-center justify-between py-3 md:py-4 transition-all duration-500 ease-in-out" data-header-target="header"
                     / Left: logo
                     = link_to root_path, class: "flex items-center" do
-                        = image_tag "logo.png", alt: "Logo", class: "h-[72px] w-[72px] md:h-[93px] md:w-[93px] object-contain"
+                        = image_tag "logo.png", alt: "Logo", data: { header_target: "logoIcon"}, class: "h-[72px] w-[72px] md:h-[93px] md:w-[93px] object-contain transition-all duration-500 ease-in-out"
 
                     / Center nav (hidden on mobile, centered on md+)
                     nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8]"
@@ -49,15 +50,15 @@ html
 
             / Mobile menu
             div id="mobile-menu" data-header-target="menu" class="md:hidden hidden bg-white shadow-md"
-                .container.mx-auto.px-4.py-4
-                    nav.flex.flex-col.gap-3
+                .container.mx-auto.px-4.pb-4
+                    nav.flex.flex-col.gap-3.items-center
                         = link_to "Головна", 'root_path', class: "text-lg text-[#1358A8] font-medium"
                         = link_to "Послуги", 'services_path', class: "text-lg text-[#1358A8] font-medium"
                         = link_to "Контакти", 'contact_path', class: "text-lg text-[#1358A8] font-medium"
 
                     hr.my-3.border-t.border-gray-200
 
-                    div.flex.flex-col.items-start.text-[#1358A8]
+                    div.flex.flex-col.items-center.text-[#1358A8]
                         = link_to "tel:+1234567890", class: "flex items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
                             i.fas.fa-phone.fa-md.pr-2
                             span.text-sm 050 134 96 29
