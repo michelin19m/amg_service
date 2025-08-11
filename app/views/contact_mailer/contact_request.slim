@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+  body
+    h2 Нове повідомлення з сайту
+    p
+      strong Ім'я:
+      = " #{@contact.name.presence || '—'}"
+    p
+      strong Телефон:
+      = " #{@contact.phone.presence || '—'}"
+    p
+      strong Повідомлення:
+    p = simple_format(@contact.message.to_s)

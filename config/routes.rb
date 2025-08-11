@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   get "test" => "home#test", as: :test_home
+
+  resources :contact_requests, only: [:create]
 end

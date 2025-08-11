@@ -1,0 +1,28 @@
+/ app/views/contact/_form.html.slim
+/ Wrap in container with id contact_form so controller can replace it via Turbo stream
+div id="contact_form"
+  = form_with url: contact_requests_path, scope: :contact, local: false do |f|
+    .grid.grid-cols-1.sm:grid-cols-2.gap-4.max-w-lg.w-full
+      = f.text_field :name, value: (contact&.name), placeholder: "Ім'я",
+        class: "w-full h-12 rounded-[10px] border-[2px] border-[#D9D9D9] p-3 placeholder:text-[#B0B8BC]"
+
+      = f.text_field :phone, value: (contact&.phone), placeholder: "Телефон",
+        class: "w-full h-12 rounded-[10px] border-[2px] border-[#D9D9D9] p-3 placeholder:text-[#B0B8BC]"
+
+      = f.text_area :message, value: (contact&.message), placeholder: "Ваше питання...",
+        class: "w-full h-40 rounded-[10px] border-[2px] border-[#D9D9D9] p-3 col-span-1 sm:col-span-2 placeholder:text-[#B0B8BC]"
+
+    .flex.flex-col.gap-1.mt-5
+      = f.submit "Надіслати",
+        class: "w-full bg-white text-[#1358A8] px-10 py-2 rounded-lg shadow border border-[#1358A8] box-border text-[20px] text-center border-[2px]"
+
+      span class="flex items-center justify-center text-[#1F2A37] text-[14px]" або зателефонуйте
+
+      = link_to "Подзвонити", "tel:+1234567890",
+        class: "w-full bg-[#1358A8] text-white px-10 py-2 rounded-lg shadow text-[20px] text-center border border-[#1358A8] border-[2px] hover:bg-[#0f447f] transition"
+
+  / show field-level errors (simple)
+  - if contact && contact.errors.any?
+    ul.mt-3.text-red-600.text-sm
+      - contact.errors.full_messages.each do |msg|
+        li = msg
