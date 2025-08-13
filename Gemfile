@@ -32,6 +32,7 @@ gem "solid_queue"
 gem "solid_cable"
 gem "slim"
 gem 'mailgun-ruby', '~>1.2.6'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -48,6 +49,8 @@ gem "thruster", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  gem 'dotenv-rails'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false

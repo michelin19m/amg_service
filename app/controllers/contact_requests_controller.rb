@@ -3,7 +3,7 @@ class ContactRequestsController < ApplicationController
   def create
     @contact = ContactMessage.new(contact_params)
 
-    if @contact.valid?
+    if verify_recaptcha(model: @contact, message: I18n.t('recaptcha.verification_failed')) && @contact.valid?
       # Queue email (non-blocking)
       ContactMailer.contact_request(@contact).deliver_now
 

@@ -1,0 +1,217 @@
+uk:
+  helpers:
+    label:
+      contact_message:
+        name: "Ім'я"
+        phone: "Телефон"
+        message: "Повідомлення"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "не може бути порожнім"
+      taken: "вже зайнято"
+      invalid: "некоректне значення"
+      too_short: "занадто коротке (мінімум %{count} символів)"
+      too_long: "занадто довге (максимум %{count} символів)"
+      not_a_number: "повинно бути числом"
+      confirmation: "не збігається з підтвердженням"
+      accepted: "повинно бути прийнято"
+      empty: "не може бути порожнім"
+      exclusion: "не дозволено"
+      inclusion: "не входить до списку дозволених"
+      equal_to: "повинно дорівнювати %{count}"
+      even: "повинно бути парним"
+      odd: "повинно бути непарним"
+      greater_than: "повинно бути більше %{count}"
+      greater_than_or_equal_to: "повинно бути не менше %{count}"
+      less_than: "повинно бути менше %{count}"
+      less_than_or_equal_to: "повинно бути не більше %{count}"
+      other_than: "повинно бути відмінним від %{count}"
+      wrong_length: "неправильна довжина (повинно бути %{count} символів)"
+      taken: "вже зайнято"
+  activemodel:
+    attributes:
+      contact_message:
+        name: "Ім'я"
+        phone: "Телефон"
+        message: "Повідомлення"
+
+  activerecord:
+    models:
+      user: "Користувач"
+      contact_message: "Повідомлення контакту"
+
+    attributes:
+      user:
+        email: "Електронна пошта"
+        password: "Пароль"
+        password_confirmation: "Підтвердження пароля"
+        name: "Ім'я"
+        surname: "Прізвище"
+        phone: "Телефон"
+      contact_message:
+        name: "Ім'я"
+        phone: "Телефон"
+        message: "Повідомлення"
+
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "не може бути порожньою"
+              invalid: "некоректна"
+              taken: "вже зайнята"
+            password:
+              blank: "не може бути порожнім"
+              too_short: "занадто короткий (мінімум %{count} символів)"
+              confirmation: "не збігається з підтвердженням"
+        contact_message:
+          attributes:
+            name:
+              blank: "не може бути порожнім"
+              too_short: "занадто коротке (мінімум %{count} символів)"
+            phone:
+              blank: "не може бути порожнім"
+              invalid: "некоректний"
+            message:
+              blank: "не може бути порожнім"
+              too_short: "занадто коротке (мінімум %{count} символів)"
+
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+    day_names:
+      - неділя
+      - понеділок
+      - вівторок
+      - середа
+      - четвер
+      - п’ятниця
+      - субота
+    abbr_day_names:
+      - нд
+      - пн
+      - вт
+      - ср
+      - чт
+      - пт
+      - сб
+    month_names:
+      - ~
+      - січня
+      - лютого
+      - березня
+      - квітня
+      - травня
+      - червня
+      - липня
+      - серпня
+      - вересня
+      - жовтня
+      - листопада
+      - грудня
+    abbr_month_names:
+      - ~
+      - січ
+      - лют
+      - бер
+      - квіт
+      - трав
+      - черв
+      - лип
+      - серп
+      - вер
+      - жовт
+      - лист
+      - груд
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M"
+    am: "дп"
+    pm: "пп"
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "пів хвилини"
+      less_than_x_seconds:
+        one: "менше секунди"
+        few: "менше %{count} секунд"
+        many: "менше %{count} секунд"
+        other: "менше %{count} секунд"
+      x_seconds:
+        one: "%{count} секунда"
+        few: "%{count} секунди"
+        many: "%{count} секунд"
+        other: "%{count} секунд"
+      less_than_x_minutes:
+        one: "менше хвилини"
+        few: "менше %{count} хвилин"
+        many: "менше %{count} хвилин"
+        other: "менше %{count} хвилин"
+      x_minutes:
+        one: "%{count} хвилина"
+        few: "%{count} хвилини"
+        many: "%{count} хвилин"
+        other: "%{count} хвилин"
+      about_x_hours:
+        one: "близько %{count} години"
+        few: "близько %{count} годин"
+        many: "близько %{count} годин"
+        other: "близько %{count} годин"
+      x_days:
+        one: "%{count} день"
+        few: "%{count} дні"
+        many: "%{count} днів"
+        other: "%{count} днів"
+      about_x_months:
+        one: "близько %{count} місяця"
+        few: "близько %{count} місяців"
+        many: "близько %{count} місяців"
+        other: "близько %{count} місяців"
+      x_months:
+        one: "%{count} місяць"
+        few: "%{count} місяці"
+        many: "%{count} місяців"
+        other: "%{count} місяців"
+      about_x_years:
+        one: "близько %{count} року"
+        few: "близько %{count} років"
+        many: "близько %{count} років"
+        other: "близько %{count} років"
+      over_x_years:
+        one: "більше %{count} року"
+        few: "більше %{count} років"
+        many: "більше %{count} років"
+        other: "більше %{count} років"
+
+  number:
+    format:
+      separator: ","
+      delimiter: " "
+    currency:
+      format:
+        format: "%n %u"
+        unit: "₴"
+        separator: ","
+        delimiter: " "
+        precision: 2
+
+  helpers:
+    submit:
+      create: "Створити %{model}"
+      update: "Оновити %{model}"
+      submit: "Зберегти %{model}"
+    select:
+      prompt: "Виберіть значення"
+  recaptcha:
+    verification_failed: "Помилка перевірки reCAPTCHA, будь ласка, спробуйте ще раз"
