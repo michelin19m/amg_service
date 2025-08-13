@@ -31,6 +31,7 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 gem "slim"
+gem 'mailgun-ruby', '~>1.2.6'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
