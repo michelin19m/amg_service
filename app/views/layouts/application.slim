@@ -32,9 +32,9 @@ html
 
                     / Center nav (hidden on mobile, centered on md+)
                     nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8]"
-                        = link_to "Головна", root_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(root_path)}"
+                        = link_to "Головна", root_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(root_path)}", data: { turbo: false }
                         = link_to "Послуги", root_path + '#services', class: "text-lg md:text-xl hover:underline"
-                        = link_to "Контакти", contacts_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(contacts_path)}"
+                        = link_to "Контакти", contacts_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(contacts_path)}", data: { turbo: false }
 
                     / Right: phone block (hidden on mobile)
                     .hidden.md:flex.flex-col.items-center.pr-5.text-[#1358A8]
@@ -42,6 +42,8 @@ html
                             i.fas.fa-phone.fa-md.pr-2
                             span.text-sm 050 134 96 29
                         span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
+                        span.text-xs.mt-1 вул. Шовковична 12, Харків, Україна
+
 
                     / Mobile: burger button
                     button type="button" data-action="click->header#toggle" data-header-target="btn" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1358A8]"
@@ -55,9 +57,9 @@ html
             div id="mobile-menu" data-header-target="menu" class="md:hidden hidden bg-white shadow-md"
                 .container.mx-auto.px-4.pb-4
                     nav.flex.flex-col.gap-3.items-center
-                        = link_to "Головна", root_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(root_path)}"
+                        = link_to "Головна", root_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(root_path)}", data: { turbo: false }
                         = link_to "Послуги", root_path + '#services', class: "text-lg text-[#1358A8] font-medium"
-                        = link_to "Контакти", contacts_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(contacts_path)}"
+                        = link_to "Контакти", contacts_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(contacts_path)}", data: { turbo: false }
 
                     hr.my-3.border-t.border-gray-200
 
@@ -66,6 +68,7 @@ html
                             i.fas.fa-phone.fa-md.pr-2
                             span.text-sm 050 134 96 29
                         span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
+                        span.text-xs.mt-1 вул. Шовковична 12, Харків, Україна
 
         main
             = yield
@@ -78,18 +81,18 @@ html
 
                     / Right — navigation
                     nav.flex.space-x-6.mt-4.md:mt-0
-                        = link_to "Головна", 'root_path', class: "text-gray-800 text-sm hover:underline"
-                        = link_to "Послуги", 'services_path', class: "text-gray-800 text-sm hover:underline"
-                        = link_to "Контакти", 'contact_path', class: "text-gray-800 text-sm hover:underline"
+                        = link_to "Головна", root_path, class: "text-gray-800 text-sm hover:underline", data: { turbo: false }
+                        = link_to "Послуги", root_path + 'services', class: "text-gray-800 text-sm hover:underline"
+                        = link_to "Контакти", contacts_path, class: "text-gray-800 text-sm hover:underline", data: { turbo: false }
 
                 / Divider
                 .border-t.border-neutral-300.mt-4.pt-4.flex.justify-end.items-center.space-x-4
                     = link_to "tel:+380XXXXXXXXX", class: "text-gray-400 hover:text-gray-600"
-                        i.fas.fa-phone-alt.text-lg
+                        i.fas.fa-phone.text-lg
 
-                    = link_to "https://facebook.com/yourpage", target: "_blank", class: "text-gray-400 hover:text-blue-600"
+                    = link_to "https://www.facebook.com/serviceamgkh", target: "_blank", class: "text-gray-400 hover:text-blue-600"
                         i.fab.fa-facebook-f.text-lg
 
-                    = link_to "https://instagram.com/yourpage", target: "_blank", class: "text-gray-400 hover:text-pink-500"
+                    = link_to "https://www.instagram.com/sto.amg.kh/", target: "_blank", class: "text-gray-400 hover:text-pink-500"
                         i.fab.fa-instagram.text-lg
 
