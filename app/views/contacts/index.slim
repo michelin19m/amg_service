@@ -1,0 +1,22 @@
+/ app/views/pages/map_demo.html.slim
+/ The map element MUST have an explicit height (Tailwind h-96 here)
+.section.max-w-4xl.mx-auto.px-4.py-8
+  .mb-6
+    h1.text-2xl.font-semibold.mb-2 Наша локація на мапі
+    p.text-gray-600.text-sm вул. Шовковична 12, Харків, Україна
+
+  / Map container: the element with data-controller becomes the Leaflet map
+  .div class="rounded-2xl shadow border bg-white"
+    div.h-96.rounded-2xl(
+        data-controller="map"
+        data-map-lat-value=@lat
+        data-map-lng-value=@lng
+        data-map-zoom-value=@zoom
+        data-map-title-value=@title
+        data-map-locale-value="uk"
+    )
+
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center" id="contact"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal mb-4 text-center" Звʼяжіться з нами
+    p class="text-lg text-[#1358A8]/80 mb-6 text-center max-w-lg" Залиште заявку для консультації та запису на сервісне обслуговування
+    = render "contact/form", contact: ContactMessage.new

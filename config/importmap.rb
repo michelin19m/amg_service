@@ -6,3 +6,5 @@ pin "@hotwired/stimulus", to: "stimulus.min.js"
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "swiper" # @11.2.10
+pin "leaflet" # @1.9.4
+pin "maplibre-gl" # @5.6.2

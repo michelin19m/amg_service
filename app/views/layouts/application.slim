@@ -15,6 +15,9 @@ html
         link rel="apple-touch-icon" href="/icon.png"
         link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        / Leaflet CSS (from unpkg, free)
+        link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"
+        link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"
 
         = stylesheet_link_tag "tailwind", "data-turbo-track": "reload"
         = javascript_importmap_tags
@@ -29,9 +32,9 @@ html
 
                     / Center nav (hidden on mobile, centered on md+)
                     nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8]"
-                        = link_to "Головна", '#home', class: "text-lg md:text-xl hover:underline underline"
-                        = link_to "Послуги", '#services', class: "text-lg md:text-xl hover:underline"
-                        = link_to "Контакти", '#contact', class: "text-lg md:text-xl hover:underline"
+                        = link_to "Головна", root_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(root_path)}"
+                        = link_to "Послуги", root_path + '#services', class: "text-lg md:text-xl hover:underline"
+                        = link_to "Контакти", contacts_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(contacts_path)}"
 
                     / Right: phone block (hidden on mobile)
                     .hidden.md:flex.flex-col.items-center.pr-5.text-[#1358A8]
@@ -52,9 +55,9 @@ html
             div id="mobile-menu" data-header-target="menu" class="md:hidden hidden bg-white shadow-md"
                 .container.mx-auto.px-4.pb-4
                     nav.flex.flex-col.gap-3.items-center
-                        = link_to "Головна", '#home', class: "text-lg text-[#1358A8] font-medium underline"
-                        = link_to "Послуги", '#services', class: "text-lg text-[#1358A8] font-medium"
-                        = link_to "Контакти", '#contact', class: "text-lg text-[#1358A8] font-medium"
+                        = link_to "Головна", root_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(root_path)}"
+                        = link_to "Послуги", root_path + '#services', class: "text-lg text-[#1358A8] font-medium"
+                        = link_to "Контакти", contacts_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(contacts_path)}"
 
                     hr.my-3.border-t.border-gray-200
 
