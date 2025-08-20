@@ -33,14 +33,14 @@ html
                     / Center nav (hidden on mobile, centered on md+)
                     nav class="hidden md:flex md:flex-1 md:justify-center md:gap-8 text-[#1358A8]"
                         = link_to "Головна", root_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(root_path)}", data: { turbo: false }
-                        = link_to "Послуги", root_path + '#services', class: "text-lg md:text-xl hover:underline"
+                        = link_to "Послуги", services_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(services_path)}", data: { turbo: false }
                         = link_to "Контакти", contacts_path, class: "text-lg md:text-xl hover:underline #{'underline' if current_page?(contacts_path)}", data: { turbo: false }
 
                     / Right: phone block (hidden on mobile)
                     .hidden.md:flex.flex-col.items-center.pr-5.text-[#1358A8]
-                        = link_to "tel:+1234567890", class: "flex flex-row items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
+                        = link_to "tel:+380505918750", class: "flex flex-row items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
                             i.fas.fa-phone.fa-md.pr-2
-                            span.text-sm 050 134 96 29
+                            span.text-sm +380 (50) 591 87 50
                         span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
                         span.text-xs.mt-1 вул. Шовковична 12, Харків, Україна
 
@@ -58,15 +58,15 @@ html
                 .container.mx-auto.px-4.pb-4
                     nav.flex.flex-col.gap-3.items-center
                         = link_to "Головна", root_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(root_path)}", data: { turbo: false }
-                        = link_to "Послуги", root_path + '#services', class: "text-lg text-[#1358A8] font-medium"
+                        = link_to "Послуги", services_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(services_path)}", data: { turbo: false }
                         = link_to "Контакти", contacts_path, class: "text-lg text-[#1358A8] font-medium #{'underline' if current_page?(contacts_path)}", data: { turbo: false }
 
                     hr.my-3.border-t.border-gray-200
 
                     div.flex.flex-col.items-center.text-[#1358A8]
-                        = link_to "tel:+1234567890", class: "flex items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
+                        = link_to "tel:+380505918750", class: "flex items-center px-4 py-2 rounded-lg border border-[#1358A8] shadow hover:bg-[#1358A8] hover:text-white transition"
                             i.fas.fa-phone.fa-md.pr-2
-                            span.text-sm 050 134 96 29
+                            span.text-sm +380 (50) 591 87 50
                         span.text-xs.mt-1 Пн-Сб з 10:00 до 18:00
                         span.text-xs.mt-1 вул. Шовковична 12, Харків, Україна
 
@@ -82,12 +82,12 @@ html
                     / Right — navigation
                     nav.flex.space-x-6.mt-4.md:mt-0
                         = link_to "Головна", root_path, class: "text-gray-800 text-sm hover:underline", data: { turbo: false }
-                        = link_to "Послуги", root_path + 'services', class: "text-gray-800 text-sm hover:underline"
+                        = link_to "Послуги", services_path, class: "text-gray-800 text-sm hover:underline", data: { turbo: false }
                         = link_to "Контакти", contacts_path, class: "text-gray-800 text-sm hover:underline", data: { turbo: false }
 
                 / Divider
                 .border-t.border-neutral-300.mt-4.pt-4.flex.justify-end.items-center.space-x-4
-                    = link_to "tel:+380XXXXXXXXX", class: "text-gray-400 hover:text-gray-600"
+                    = link_to "tel:+380505918750", class: "text-gray-400 hover:text-gray-600"
                         i.fas.fa-phone.text-lg
 
                     = link_to "https://www.facebook.com/serviceamgkh", target: "_blank", class: "text-gray-400 hover:text-blue-600"

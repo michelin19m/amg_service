@@ -9,7 +9,7 @@ div class="relative w-full h-[50vh] sm:h-[70vh] overflow-hidden" id="home"
     div class="absolute z-20 left-4 sm:left-[60px] bottom-4 sm:bottom-[80px] pr-3 max-w-[720px] text-left"
         h1 class="text-white text-[28px] sm:text-[50px] font-bold leading-tight mb-2" Автосервіс АМГ
         p class="text-white text-[16px] sm:text-[20px] mb-1" Професійний автосервіс у Харкові.
-        p class="text-white text-[16px] sm:text-[20px] mb-4" 20 років якості та довіри — ремонтуємо як для себе.
+        p class="text-white text-[16px] sm:text-[20px] mb-4" 30 років якості та довіри — ремонтуємо як для себе.
         = link_to "Записатись", "#contact", class: "inline-block bg-[#1358A8] text-white px-6 py-2 sm:px-10 sm:py-3 rounded-lg text-[16px] sm:text-[20px] shadow hover:bg-[#0f447f] transition"
 
 
@@ -19,50 +19,39 @@ div class="why-us py-6 sm:py-10 bg-white"
         / heading with lines
         div class="flex items-center"
             hr class="flex-grow border-t border-[#1358A8]"
-            p class="mx-4 text-[28px] sm:text-[50px] text-[#1358A8] font-semibold" Чому обирають нас
+            p class="mx-4 text-[22px] sm:text-[44px] text-[#1358A8] font-semibold" Чому обирають нас
             hr class="flex-grow border-t border-[#1358A8]"
 
         / grid of 3x3 (explicit 9 items)
-        div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-6"
+        div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 mt-4"
             div class="flex items-center"
-                i class="fas fa-phone fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Більше 20 років досвіду
+                i class="fas fa-phone fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Більше 30 років досвіду
 
             div class="flex items-center"
-                i class="fas fa-envelope fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Оперативний ремонт без втрати якості
+                i class="fas fa-map-marker fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Професійна команда майстрів
 
             div class="flex items-center"
-                i class="fas fa-map-marker fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Професійна команда майстрів з багаторічним досвідом
+                i class="fas fa-tags fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Доступні ціни
 
             div class="flex items-center"
-                i class="fas fa-wrench fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Комплексне обслуговування авто
+                i class="fas fa-calendar-check fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Швидкий запис
 
             div class="flex items-center"
-                i class="fas fa-tags fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Доступні ціни
+                i class="fas fa-car fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Працюємо з усіма марками авто
 
             div class="flex items-center"
-                i class="fas fa-calendar-check fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Швидкий запис
+                i class="fas fa-check-circle fa-lg sm:fa-2x mr-3 text-[#1358A8]"
+                span class="text-sm sm:text-base text-[#1F2A37] font-light" Контроль робіт на кожному етапі
 
-            div class="flex items-center"
-                i class="fas fa-car fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Працюємо з усіма марками авто
-
-            div class="flex items-center"
-                i class="fas fa-check-circle fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Контроль робіт на кожному етапі
-
-            div class="flex items-center"
-                i class="fas fa-shield-alt fa-2x sm:fa-3x mr-4 text-[#1358A8]"
-                span class="text-base sm:text-lg text-[#1F2A37] font-light" Гарантія на всі роботи
 
 
 / Services block — initial 6 visible cards + 6 hidden (expandable)
-div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data-controller="services"
+div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6"
     div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10"
         / heading (anchor target)
         div class="flex items-center mb-6" id="services"
@@ -81,7 +70,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Установлення автомобільних охоронних систем
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Проводимо професійний монтаж сучасних сигналізацій, іммобілайзерів і GPS-трекерів для комплексного захисту авто від викрадення та злому.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition text-center" href="#" Детальніше
 
             / Card 2
@@ -93,7 +82,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Продаж та встановлення фаркопів
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Робимо якісний підбір і надійний монтаж фаркопів.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 3
@@ -105,7 +94,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Тонування автомобілів
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Тонування якісними плівками Global та Ultra Vision.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 4
@@ -117,7 +106,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Шиномонтаж
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Встановлення, балансування та ремонт шин.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 5
@@ -129,7 +118,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Рихтовка авто
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Відновлення кузова до заводських параметрів.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
             / Card 6
@@ -141,62 +130,12 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6" data
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Ремонт/заміна приймальної вихлопної труби
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Проводимо ремонт або повну заміну приймальної труби вихлопу. Так само ремонт колектора чи заміна.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
-        / ===== Hidden extra cards container (collapsed by default) =====
-        div id="services-extra" class="mt-6" data-services-target="extra" aria-hidden="true" style="max-height: 0px; overflow: hidden; transition: max-height 500ms ease;"
-            div class="cards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-                / Extra Card 7
-                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                    div class="relative"
-                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 7"
-                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                    div class="p-4 sm:p-6 flex flex-col flex-grow"
-                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Видалення/заміна вихлопного каталізатора
-                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Здійснюємо заміну або повне видалення вихлопного каталізатора з подальшим встановленням обманки або полум’ягасника, а також комп’ютерним відключенням Час роботи від 60 хвилин і вище
-                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                            / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-                / Extra Card 7
-                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                    div class="relative"
-                        = image_tag "STO.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 7"
-                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                    div class="p-4 sm:p-6 flex flex-col flex-grow"
-                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" СТО
-                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Здійснюємо професійний комплексний сервіс з ремонту, технічного обслуговування та встановлення додаткових автосистем для вашого автомобіля.
-                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                            / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-                / Extra Card 7
-                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                    div class="relative"
-                        = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 7"
-                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                    div class="p-4 sm:p-6 flex flex-col flex-grow"
-                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Встановлення та ремонт ГБО
-                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Здійснюємо професійний монтаж газобалонного обладнання для економного використання автомобіля.
-                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                            / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-                / Extra Card 7
-                div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                    div class="relative"
-                        = image_tag "car-wash.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 7"
-                        div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                    div class="p-4 sm:p-6 flex flex-col flex-grow"
-                        h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Автомийка
-                        p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Надаємо якісні послуги з миття та чистки автомобілів, що забезпечує ідеальну чистоту кузова та салону.
-                        div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                            a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="#" Подзвонити
-                            / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-                
-    / ===== Show more button (centered) =====
+    / ===== CTA to all services =====
     div class="flex justify-center mb-6"
-        button type="button" data-action="click->services#toggle" data-services-target="button" aria-controls="services-extra" aria-expanded="false" data-services-show-text="Показати ще" data-services-hide-text="Приховати" class="inline-flex items-center gap-3 bg-white text-[#1358A8] px-6 py-2 rounded-lg shadow font-medium hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1358A8]"
-            span class="label" Показати ще
-            i class="fas fa-chevron-down transition-transform duration-300"
+        = link_to "Дивитись усі сервіси", services_path, class: "inline-flex items-center gap-3 bg-white text-[#1358A8] px-6 py-2 rounded-lg shadow font-medium hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1358A8]"
 
 / -------------------- REVIEWS (Swiper slider) --------------------
 section.py-12 data-controller="reviews"
@@ -259,6 +198,67 @@ section.py-12 data-controller="reviews"
                 /     .swiper-button-next
 
 
+/ -------------------- PROMOTIONS --------------------
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Акції та пропозиції
+    div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
+        div class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-6"
+            h3 class="text-xl font-semibold text-[#1358A8]" Сезонна заміна шин
+            p class="text-[#1F2A37] mt-2" Знижка -10% на шиномонтаж до кінця місяця
+        div class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-6"
+            h3 class="text-xl font-semibold text-[#1358A8]" Діагностика ходової
+            p class="text-[#1F2A37] mt-2" Безкоштовно при подальшому ремонті
+        div class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-6"
+            h3 class="text-xl font-semibold text-[#1358A8]" Перевірка кондиціонера
+            p class="text-[#1F2A37] mt-2" Спец-ціна на заправку фреоном
+
+/ -------------------- GALLERY (Before/After teaser) --------------------
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Галерея робіт
+    div class="grid grid-cols-2 md:grid-cols-6 gap-3 mt-6"
+        - ["tire-service.jpg", "car-straightening.jpg", "car-tinting.jpg", "car-wash.jpg", "GBO.jpg", "STO.jpg"].each do |img|
+            = image_tag img, class: "w-full h-28 md:h-36 object-cover rounded-lg border border-zinc-200", alt: "Work photo"
+
+/ -------------------- BRANDS --------------------
+/div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Працюємо з марками
+    div class="grid grid-cols-3 md:grid-cols-6 gap-4 mt-6 text-center text-[#1358A8]"
+        - ["Toyota", "BMW", "VW", "Mercedes", "Audi", "Nissan"].each do |brand|
+            div class="rounded-xl border-2 border-zinc-300 bg-white py-4 text-lg" = brand
+
+/ -------------------- PRICING TEASERS --------------------
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Популярні послуги та ціни
+    div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
+        - pricing = [{ name: "Комп'ютерна діагностика", price: "від 500₴" }, { name: "Заміна масла та фільтрів", price: "від 800₴" }, { name: "Шиномонтаж (комплект)", price: "від 700₴" }]
+        - pricing.each do |item|
+            div class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-6 flex items-center justify-between"
+                span class="text-[#1F2A37] text-lg" = item[:name]
+                span class="text-[#1358A8] text-lg font-semibold" = item[:price]
+
+/ -------------------- MAP PREVIEW --------------------
+div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Де ми знаходимось
+    p class="text-[#1F2A37] mt-2" вул. Шовковична 12, Харків, Україна
+    .mt-4.rounded-2xl.shadow.border.bg-white
+        div.h-60.md:h-72.rounded-2xl.relative(
+            data-controller="map"
+            data-map-lat-value="50.028264"
+            data-map-lng-value="36.252615"
+            data-map-zoom-value="15"
+            data-map-title-value="АМГ Сервіс \n вул. Шовковична 12"
+        )
+            = link_to "Перейти на сторінку контактів →", contacts_path, class: "absolute left-3 top-3 md:right-3 md:bottom-3 md:left-auto md:top-auto z-10 bg-white/90 backdrop-blur px-2 py-1 md:px-4 md:py-2 rounded-lg shadow border border-[#1358A8] text-[#1358A8] text-xs md:text-base hover:bg-white"
+
+/ -------------------- FAQ --------------------
+/div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Поширені питання
+    div class="space-y-3 mt-6"
+        - faqs = [{ q: "Яка гарантія на роботи?", a: "Надаємо гарантію на виконані роботи залежно від послуги." }, { q: "Чи можна привезти свої запчастини?", a: "Так, працюємо з вашими запчастинами або підбираємо свої." }, { q: "Скільки часу займає ремонт?", a: "Залежить від складності; прості роботи в день звернення." }]
+        - faqs.each do |faq|
+            details class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-4"
+                summary class="cursor-pointer text-[#1358A8] text-lg font-medium" = faq[:q]
+                p class="text-[#1F2A37] mt-2" = faq[:a]
 / -------------------- CONTACT / FOOTER snippets (kept & simplified) --------------------
 div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center" id="contact"
     h2 class="text-sky-700 text-3xl md:text-5xl font-normal mb-4 text-center" Звʼяжіться з нами
