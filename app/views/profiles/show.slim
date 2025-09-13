@@ -1,0 +1,22 @@
+- content_for :title, "Профіль"
+
+.container.mx-auto.px-4.py-8
+  .max-w-3xl.mx-auto
+    h1.text-2xl.font-semibold.mb-6 Профіль
+
+    - if @user.present?
+      .bg-white.rounded-lg.shadow.p-6
+        - if @user.respond_to?(:avatar_url) && @user.avatar_url.present?
+          = image_tag @user.avatar_url, alt: (@user.try(:name) || 'Avatar'), class: "h-24 w-24 rounded-full object-cover mb-4"
+        - else
+          .h-24.w-24.rounded-full.flex.items-center.justify-center.bg-gray-100.text-2xl.font-medium.mb-4
+            = @user.try(:name).to_s[0].to_s.upcase if @user.try(:name)
+
+        p.font-medium.text-lg= @user.try(:name) || 'User'
+        p.text-gray-600= @user.try(:email)
+
+    - else
+      .bg-white.rounded-lg.shadow.p-6
+        p.text-gray-700 Ви не увійшли в систему.
+        - if defined?(new_user_session_path)
+          = link_to "Увійти", new_user_session_path, class: "inline-block mt-4 text-[#1358A8] hover:underline"
