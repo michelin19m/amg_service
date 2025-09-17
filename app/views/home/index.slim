@@ -10,11 +10,11 @@ div class="relative w-full h-[50vh] sm:h-[70vh] overflow-hidden" id="home"
         h1 class="text-white text-[28px] sm:text-[50px] font-bold leading-tight mb-2" Автосервіс АМГ
         p class="text-white text-[16px] sm:text-[20px] mb-1" Професійний автосервіс у Харкові.
         p class="text-white text-[16px] sm:text-[20px] mb-4" 30 років якості та довіри — ремонтуємо як для себе.
-        = link_to "Записатись", "#contact", class: "inline-block bg-[#1358A8] text-white px-6 py-2 sm:px-10 sm:py-3 rounded-lg text-[16px] sm:text-[20px] shadow hover:bg-[#0f447f] transition"
+        = link_to "Записатись", "tel:+380505918750", class: "inline-block bg-[#1358A8] text-white px-6 py-2 sm:px-10 sm:py-3 rounded-lg text-[16px] sm:text-[20px] shadow hover:bg-[#0f447f] transition"
 
 
 / -------------------- WHY-US (icons + text grid) --------------------
-div class="why-us py-6 sm:py-10 bg-white"
+div class="why-us py-8 sm:py-10 bg-white"
     div class="container mx-auto px-4 sm:px-6 lg:px-8"
         / heading with lines
         div class="flex items-center"
@@ -51,7 +51,7 @@ div class="why-us py-6 sm:py-10 bg-white"
 
 
 / Services block — initial 6 visible cards + 6 hidden (expandable)
-div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6"
+div class="m-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6"
     div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10"
         / heading (anchor target)
         div class="flex items-center mb-6" id="services"
@@ -76,7 +76,7 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6"
             / Card 2
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
-                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 2"
+                    = image_tag "car-straightening.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 2"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Продаж та встановлення фаркопів
@@ -100,37 +100,37 @@ div class="mx-4 sm:mx-6 rounded-[12px] sm:rounded-[20px] bg-[#1358A8] pb-6"
             / Card 4
             div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
                 div class="relative"
+                    = image_tag "STO.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 6"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" СТО
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Здійснюємо професійний комплексний сервіс з ремонту, технічного обслуговування та встановлення додаткових автосистем для вашого автомобіля.
+                    div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380666888929" Подзвонити
+                        / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 5
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
+                    = image_tag "exhaust.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 6"
+                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
+                div class="p-4 sm:p-6 flex flex-col flex-grow"
+                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Ремонт вихлопних систем
+                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Заміна, видалення каталізаторів, ремонт різної складності вихлопної системи автомобіля.
+                    div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380988808453" Подзвонити
+                        / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
+
+            / Card 6
+            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
+                div class="relative"
                     = image_tag "tire-service.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 4"
                     div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
                 div class="p-4 sm:p-6 flex flex-col flex-grow"
                     h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Шиномонтаж
                     p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Встановлення, балансування та ремонт шин.
                     div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
-                        / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-
-            / Card 5
-            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                div class="relative"
-                    = image_tag "car-straightening.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 5"
-                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                div class="p-4 sm:p-6 flex flex-col flex-grow"
-                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Рихтовка авто
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Відновлення кузова до заводських параметрів.
-                    div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
-                        / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
-
-            / Card 6
-            div class="bg-white shadow-lg rounded-[12px] sm:rounded-[20px] overflow-hidden flex flex-col h-full"
-                div class="relative"
-                    = image_tag "image1.jpg", loading: "lazy", class: "w-full object-cover h-[140px] sm:h-[193px]", alt: "Service 6"
-                    div class="absolute inset-0 bg-[#F1EBEB] opacity-20"
-                div class="p-4 sm:p-6 flex flex-col flex-grow"
-                    h2 class="font-bold mb-2 text-[18px] sm:text-[25px] text-[#1F2A37]" Ремонт/заміна приймальної вихлопної труби
-                    p class="flex-grow text-[15px] sm:text-[20px] text-[#1F2A37]" Проводимо ремонт або повну заміну приймальної труби вихлопу. Так само ремонт колектора чи заміна.
-                    div class="mt-4 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3"
-                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380505918750" Подзвонити
+                        a class="inline-block bg-white text-[#1358A8] px-4 py-2 rounded-lg shadow border border-[#1358A8] text-[15px] sm:text-[18px] text-center" href="tel:+380951153114" Подзвонити
                         / a class="inline-block bg-[#1358A8] text-white px-4 py-2 rounded-lg shadow text-[15px] sm:text-[18px] text-center hover:bg-[#0f447f] transition" href="#" Детальніше
 
     / ===== CTA to all services =====
@@ -145,7 +145,7 @@ section.py-12 data-controller="reviews"
             .swiper-wrapper
                 / === Slide 1 ===
                 .swiper-slide
-                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:py-10.pl-10.pr-12.relative
                         blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
                             | Доброго дня. Скажу приємно здивований. Був на сто робили гальма на лексус. Дуже швидко якісно. Найголовніше акуратно. Усі за собою миють. Кожну запчастину до якої стикалися. Також там робив глушник. Хлопець дуже розумний. Підхід на найвищому рівні. Швидко все зібрав. Грошей коштувало нормально. Не скажу, що багато. Найголовніше якісно. Молодці. Для мене в Харкові з'явилося ще одне сто куди звертатимусь у разі чого.
                             / = link_to "show more", "#", class: "underline ml-1 text-current"
@@ -153,41 +153,41 @@ section.py-12 data-controller="reviews"
                             = image_tag "avatar1.png", alt: "Misha Makhnovskyy avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
                             .author
                                 p.text-yellow-500.text-base.md:text-xl.font-medium Ігорь Борейчук
-                                p.text-yellow-500/60.text-sm.md:text-lg Лютий 2023
+                                p.text-yellow-500/60.text-sm.md:text-lg Березень 2019
                         span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
                 / === Slide 2 ===
                 .swiper-slide
-                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:py-10.pl-10.pr-12.relative
                         blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
-                            | Все сделали быстро и качественно, после диагностики подобрали необходимые запчасти на складе, цены радуют.
+                            | Зручно розташований, практично в центрі. Водночас помірні ціни. Багато видів послуг: СТО, мийка, ремонт вихлопних систем, тонування, сигналізації, автогаз. Для звернення краще телефонувати заздалегідь, але можна й заїхати «з коліс» для нескладних процедур.
                         .mt-6.flex.items-center.gap-4
                             = image_tag "avatar1.png", alt: "Anna Ivanova avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
                             .author
-                                p.text-yellow-500.text-base.md:text-xl.font-medium Сергій Губаренко
-                                p.text-yellow-500/60.text-sm.md:text-lg Січень 2023
+                                p.text-yellow-500.text-base.md:text-xl.font-medium Mаксім
+                                p.text-yellow-500/60.text-sm.md:text-lg Травeнь 2024
                         span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
                 .swiper-slide
-                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:py-10.pl-10.pr-14.relative
                         blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
-                            | Все сделали быстро и качественно, после диагностики подобрали необходимые запчасти на складе, цены радуют.
+                            | Все зробили швидко і якісно, після діагностики підібрали необхідні запчастини на складі, ціни радують.
                         .mt-6.flex.items-center.gap-4
                             = image_tag "avatar1.png", alt: "Anna Ivanova avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
                             .author
                                 p.text-yellow-500.text-base.md:text-xl.font-medium Сергій Губаренко
-                                p.text-yellow-500/60.text-sm.md:text-lg Січень 2023
+                                p.text-yellow-500/60.text-sm.md:text-lg Лютий 2022
                         span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
                 .swiper-slide
-                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:p-10.relative
+                    .bg-white.rounded-2xl.shadow-lg.border-2.border-zinc-300.p-6.md:py-10.pl-10.pr-14.relative
                         blockquote.lead.text-gray-800.text-base.md:text-xl.leading-relaxed
-                            | Все сделали быстро и качественно, после диагностики подобрали необходимые запчасти на складе, цены радуют.
+                            | Робили діагностику, заміну котушки запалювання та видалення каталізатора. Все вийшло безкоштовно при продажу каталізаторів там же.
                         .mt-6.flex.items-center.gap-4
                             = image_tag "avatar1.png", alt: "Anna Ivanova avatar", class: "w-14 h-14 rounded-full bg-zinc-300 object-cover"
                             .author
-                                p.text-yellow-500.text-base.md:text-xl.font-medium Сергій Губаренко
-                                p.text-yellow-500/60.text-sm.md:text-lg Січень 2023
+                                p.text-yellow-500.text-base.md:text-xl.font-medium Володимир Літвінов
+                                p.text-yellow-500/60.text-sm.md:text-lg Січень 2021
                         span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
             / Swiper navigation and pagination below the cards
@@ -260,7 +260,7 @@ div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
                 summary class="cursor-pointer text-[#1358A8] text-lg font-medium" = faq[:q]
                 p class="text-[#1F2A37] mt-2" = faq[:a]
 / -------------------- CONTACT / FOOTER snippets (kept & simplified) --------------------
-div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center" id="contact"
+/div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col items-center" id="contact"
     h2 class="text-sky-700 text-3xl md:text-5xl font-normal mb-4 text-center" Звʼяжіться з нами
     p class="text-lg text-[#1358A8]/80 mb-6 text-center max-w-lg" Залиште заявку для консультації та запису на сервісне обслуговування
     / simple form placeholders (replace with form_with later)
