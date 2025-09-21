@@ -191,7 +191,7 @@ section.py-12 data-controller="reviews"
                         span.absolute.right-4.md:right-8.top-6.md:top-8.text-sky-700/30.text-9xl.select-none.pointer-events-none.z-0 “
 
             / Swiper navigation and pagination below the cards
-            .flex.flex-col.items-center.mt-6
+            .flex.flex-col.items-center.mt-10
                 .swiper-pagination.flex.justify-center
                 / .flex
                 /     .swiper-button-prev
@@ -199,7 +199,7 @@ section.py-12 data-controller="reviews"
 
 
 / -------------------- PROMOTIONS --------------------
-div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+/div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
     h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Акції та пропозиції
     div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
         div class="bg-white rounded-2xl shadow border-2 border-zinc-300 p-6"
@@ -215,9 +215,9 @@ div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
 / -------------------- GALLERY (Before/After teaser) --------------------
 div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
     h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Галерея робіт
-    div class="grid grid-cols-2 md:grid-cols-6 gap-3 mt-6"
-        - ["tire-service.jpg", "car-straightening.jpg", "car-tinting.jpg", "car-wash.jpg", "GBO.jpg", "STO.jpg"].each do |img|
-            = image_tag img, class: "w-full h-28 md:h-36 object-cover rounded-lg border border-zinc-200", alt: "Work photo"
+    div class="grid grid-cols-2 lg:grid-cols-5 gap-3 mt-6"
+        - ["example1.jpg", "example2.jpg", "example3.png", "example4.png", "example5.png"].each do |img|
+            = image_tag img, class: "w-full h-28 md:h-56 object-cover rounded-lg border border-zinc-200", alt: "Work photo"
 
 / -------------------- BRANDS --------------------
 /div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
@@ -227,7 +227,7 @@ div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
             div class="rounded-xl border-2 border-zinc-300 bg-white py-4 text-lg" = brand
 
 / -------------------- PRICING TEASERS --------------------
-div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
+/div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8"
     h2 class="text-sky-700 text-3xl md:text-5xl font-normal" Популярні послуги та ціни
     div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"
         - pricing = [{ name: "Комп'ютерна діагностика", price: "від 500₴" }, { name: "Заміна масла та фільтрів", price: "від 800₴" }, { name: "Шиномонтаж (комплект)", price: "від 700₴" }]
